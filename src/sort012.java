@@ -1,11 +1,10 @@
 public class sort012 {
     // 🚀NOTE:- Single Scan Only
-    public static void swap(int posOne, int posTwo,int[] arr) {
-        int temp=arr[posTwo];
-        arr[posTwo]=arr[posOne];
-        arr[posOne]=temp;
+    public static void swap(int posOne, int posTwo, int[] arr) {
+        int temp = arr[posTwo];
+        arr[posTwo] = arr[posOne];
+        arr[posOne] = temp;
     }
-
 
 
     // We will follow Dutch National Flag -> using 3 pointers ( low, mid, high )
@@ -13,10 +12,10 @@ public class sort012 {
     // mid  = current element
     // high = where next 2 should go
     public static void sort012Methods(int[] arr) {
-        int low=0;
-        int mid=0;
-        int high=arr.length-1;
-        while (mid<=high) {
+        int low = 0;
+        int mid = 0;
+        int high = arr.length - 1;
+        while (mid <= high) {
 
             if (arr[mid] == 0) {
                 swap(low, mid, arr);
@@ -31,8 +30,8 @@ public class sort012 {
         }
 
 
-        for(int val:arr){
-            System.out.print(val+" ");
+        for (int val : arr) {
+            System.out.print(val + " ");
         }
 
     }
